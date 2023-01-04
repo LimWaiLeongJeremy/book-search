@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>You search for <i data-th-text="${bookname}"></i>, <i data-th-text="${limit}"></i> will be shown below.</h1>
+        <table>
+            <tr data-th-each="result : ${results}">
+                <td>
+                    <img data-th-src="${result.image}" alt="">
+                </td>
+                <td>
+                    <h4 data-th-text="${result.title}"></h4>
+                    <p data-th-text="${result.description}"></p>
+                    <div>Rating: <i data-th-text="${result.rating}"></i></div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
