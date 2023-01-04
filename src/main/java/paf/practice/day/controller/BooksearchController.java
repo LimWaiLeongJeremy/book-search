@@ -24,7 +24,7 @@ public class BooksearchController {
         List<Search> results = srv.getbooks(bookname, limit);
    
 
-        System.out.println("results: " + results);
+        // System.out.println("results: " + results);
         model.addAttribute("bookname", bookname);
         model.addAttribute("limit", limit);
         model.addAttribute("results", results);
